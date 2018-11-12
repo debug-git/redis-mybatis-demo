@@ -1,0 +1,6 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+content: "这是测试环境"

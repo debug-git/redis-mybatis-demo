@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mybatis_demo.dao.UserMapper">
+
+    <!-- 通用查询结果列-->
+    <sql id="Base_Column_List">
+        userId, userName, password,phone
+    </sql>
+
+    <resultMap id="baseResultMap" type="com.example.mybatis_demo.pojo.User">
+        <result column="userId" property="userId" javaType="java.lang.Integer"></result>
+        <result column="userName" property="userName" javaType="java.lang.String"></result>
+        <result column="password" property="password" javaType="java.lang.String"></result>
+        <result column="phone" property="phone" javaType="java.lang.String"></result>
+        <result column="modifyTime" property="modifyTime" javaType="java.lang.String"></result>
+    </resultMap>
+
+    <select id="selectUserList" resultMap="baseResultMap">
+        SELECT <include refid="Base_Column_List"/> FROM `user` limit 10
+    </select>
+
+    <insert id="insertBatch">
+        INSERT INTO `user`(`userName`,`password`,`phone`,`modifyTime`)
+        VALUES
+        ('name','pafd','dfs15',SYSDATE()),
+        ('name','pafd','dfs15',SYSDATE()),
+        ('name','pafd','dfs15',SYSDATE())
+    </insert>
+
+    <insert id="insertList" parameterType="com.example.mybatis_demo.pojo.User">
+        INSERT INTO `user`(`userName`,`password`,`phone`,`modifyTime`)
+        VALUES
+        <foreach collection="kkk" item="i"  separator=",">
+            (#{i.userName,jdbcType=VARCHAR},#{i.password,jdbcType=VARCHAR},#{i.phone,jdbcType=VARCHAR},#{i.modifyTime,jdbcType=TIMESTAMP})
+        </foreach>
+    </insert>
+
+    <update id="update" parameterType="com.example.mybatis_demo.pojo.User">
+        UPDATE `user` SET `password`=#{password} WHERE userId = #{userId}
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+       delete  from  `user` where  userId = #{userId}
+    </delete>
+</mapper>

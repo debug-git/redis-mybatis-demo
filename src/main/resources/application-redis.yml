@@ -1,0 +1,52 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: utf-8
+
+
+content: "这是redis开发环境"
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf-8 #&useAffectedRows=true
+      username: root
+      password: 1234
+      driver-class-name: com.mysql.jdbc.Driver
+      filter: stat
+      max-active: 20
+      initial-size: 1
+      max-wait: 60000
+      min-idle: 1
+#            time-between-eviction-runs-millis: 60000
+#            min-evictable-idle-time-millis: 30000
+#            validation-query: select 'x'
+      db-type: com.alibaba.druid.pool.DruidDataSource
+    #      default-auto-commit: false #若要手动管理事务,则必须为false
+
+  #配置redis数据库连接
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8  #连接池最大连接数（使用负值表示没有限制）
+        max-idle: 8  #连接池中的最大空闲连接
+#    timeout: 0s  #连接超时时间（毫秒）
+
+## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
+mybatis:
+  mapper-locations: classpath:mapping/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+#  type-aliases-package: com.example.mybatis_demo.pojo  # 注意：对应实体类的路径
+#  configuration:
+#    cache-enabled: true #使用缓存
+
+
+#写日志
+logging:
+  path: F:/workSpace/IDEA_workspace/test_log
+  level:
+    com.example.mybatis_demo.dao: debug
