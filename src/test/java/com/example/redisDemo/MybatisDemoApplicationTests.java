@@ -1,7 +1,7 @@
-package com.example.mybatis_demo;
+package com.example.redisDemo;
 
 
-import com.example.mybatis_demo.pojo.User;
+import com.example.redisDemo.pojo.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

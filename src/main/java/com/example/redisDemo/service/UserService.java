@@ -1,6 +1,6 @@
-package com.example.mybatis_demo.service;
+package com.example.redisDemo.service;
 
-import com.example.mybatis_demo.pojo.User;
+import com.example.redisDemo.pojo.User;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.mybatis_demo.pojo;
+package com.example.redisDemo.pojo;
 
 import java.io.Serializable;
 import java.util.Date;

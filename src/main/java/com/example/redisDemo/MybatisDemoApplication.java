@@ -1,4 +1,4 @@
-package com.example.mybatis_demo;
+package com.example.redisDemo;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -7,7 +7,7 @@ import org.springframework.cache.annotation.EnableCaching;
 
 @EnableCaching
 @SpringBootApplication
-@MapperScan("com.example.mybatis_demo.dao")
+@MapperScan("com.example.redisDemo.dao")
 public class MybatisDemoApplication {
 
     public static void main(String[] args) {

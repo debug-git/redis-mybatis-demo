@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.mybatis_demo.dao.UserMapper">
+<mapper namespace="com.example.redisDemo.dao.UserMapper">
 
     <!-- 通用查询结果列-->
     <sql id="Base_Column_List">
         userId, userName, password,phone
     </sql>
 
-    <resultMap id="baseResultMap" type="com.example.mybatis_demo.pojo.User">
+    <resultMap id="baseResultMap" type="com.example.redisDemo.pojo.User">
         <result column="userId" property="userId" javaType="java.lang.Integer"></result>
         <result column="userName" property="userName" javaType="java.lang.String"></result>
         <result column="password" property="password" javaType="java.lang.String"></result>
@@ -27,7 +27,7 @@
         ('name','pafd','dfs15',SYSDATE())
     </insert>
 
-    <insert id="insertList" parameterType="com.example.mybatis_demo.pojo.User">
+    <insert id="insertList" parameterType="com.example.redisDemo.pojo.User">
         INSERT INTO `user`(`userName`,`password`,`phone`,`modifyTime`)
         VALUES
         <foreach collection="kkk" item="i"  separator=",">
@@ -35,7 +35,7 @@
         </foreach>
     </insert>
 
-    <update id="update" parameterType="com.example.mybatis_demo.pojo.User">
+    <update id="update" parameterType="com.example.redisDemo.pojo.User">
         UPDATE `user` SET `password`=#{password} WHERE userId = #{userId}
     </update>
 

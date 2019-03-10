@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>mybatis_demo</artifactId>
+    <artifactId>redis_demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>mybatis_demo</name>
-    <description>Demo project for Spring Boot</description>
+    <name>redis_demo</name>
+    <description>这是个redis的demo</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -1,8 +1,8 @@
-package com.example.mybatis_demo.controller;
+package com.example.redisDemo.controller;
 
-import com.example.mybatis_demo.dao.UserMapper;
-import com.example.mybatis_demo.pojo.User;
-import com.example.mybatis_demo.service.UserService;
+import com.example.redisDemo.dao.UserMapper;
+import com.example.redisDemo.pojo.User;
+import com.example.redisDemo.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +12,11 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 /**
  * code is far away from bug with the animal protecting

@@ -1,8 +1,8 @@
-package com.example.mybatis_demo.service.impl;
+package com.example.redisDemo.service.impl;
 
-import com.example.mybatis_demo.dao.UserMapper;
-import com.example.mybatis_demo.pojo.User;
-import com.example.mybatis_demo.service.UserService;
+import com.example.redisDemo.dao.UserMapper;
+import com.example.redisDemo.pojo.User;
+import com.example.redisDemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
@@ -10,8 +10,6 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.List;
 
 

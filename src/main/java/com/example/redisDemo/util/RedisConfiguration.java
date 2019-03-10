@@ -1,4 +1,4 @@
-package com.example.mybatis_demo.util;
+package com.example.redisDemo.util;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

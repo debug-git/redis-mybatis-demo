@@ -1,7 +1,7 @@
-package com.example.mybatis_demo.dao;
+package com.example.redisDemo.dao;
 
 
-import com.example.mybatis_demo.pojo.User;
+import com.example.redisDemo.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
